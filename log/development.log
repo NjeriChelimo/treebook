@@ -1,1 +1,3573 @@
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (232.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (219.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.9ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateStatuses (20121221143411)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  CREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121221143411')[0m
+  [1m[35m (275.3ms)[0m  commit transaction
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-12-23 04:46:56 +0300
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (86ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-23 04:47:34 +0300
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.9) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.2ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:47:55 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.4ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (6.2ms)
+ERROR: compiling _app_views_layouts_application_html_erb___2814090095184563739_69930089762560 RAISED /home/martha/Projects/treehouse/treebook/app/views/layouts/application.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ink_to "Treebook" statuses_path );@output_buffer.safe_concat...
+...                               ^
+Function body:           def _app_views_layouts_application_html_erb___2814090095184563739_69930089762560(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>Treebook</title>
+  ');@output_buffer.append= ( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <li class"brand">');@output_buffer.append= ( link_to "Treebook" statuses_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      <div>
+    </div>
+  </div>
+
+
+
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+</body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `module_eval'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `compile'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:232:in `compile!'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:144:in `block in render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:125:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:143:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:88:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/home/martha/Projects/treehouse/treebook/app/controllers/statuses_controller.rb:7:in `index'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:167:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:414:in `_run__3974334330335913390__process_action__2286019489612622695__callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:121:in `process'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:45:in `process'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal.rb:203:in `dispatch'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal.rb:246:in `block in action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/query_cache.rb:64:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `_run__1766473720993403083__call__4205257925753848418__callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 608ms
+
+ActionView::Template::Error (/home/martha/Projects/treehouse/treebook/app/views/layouts/application.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ink_to "Treebook" statuses_path );@output_buffer.safe_concat...
+...                               ^):
+    10:   <div class="navbar">
+    11:     <div class="navbar-inner">
+    12:       <div class="container">
+    13:         <li class"brand"><%= link_to "Treebook" statuses_path %>
+    14:       <div>
+    15:     </div>
+    16:   </div>
+  app/controllers/statuses_controller.rb:7:in `index'
+
+
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (9.2ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (49.0ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:48:09 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.7ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (2.6ms)
+ERROR: compiling _app_views_layouts_application_html_erb___2814090095184563739_69930092715340 RAISED /home/martha/Projects/treehouse/treebook/app/views/layouts/application.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ink_to "Treebook" statuses_path );@output_buffer.safe_concat...
+...                               ^
+Function body:           def _app_views_layouts_application_html_erb___2814090095184563739_69930092715340(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>Treebook</title>
+  ');@output_buffer.append= ( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <li class"brand">');@output_buffer.append= ( link_to "Treebook" statuses_path );@output_buffer.safe_concat('</li>
+      <div>
+    </div>
+  </div>
+
+
+
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+</body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `module_eval'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `compile'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:232:in `compile!'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:144:in `block in render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:125:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:143:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:88:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/home/martha/Projects/treehouse/treebook/app/controllers/statuses_controller.rb:7:in `index'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:167:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:414:in `_run__3974334330335913390__process_action__2286019489612622695__callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:121:in `process'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:45:in `process'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal.rb:203:in `dispatch'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal.rb:246:in `block in action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/query_cache.rb:64:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `_run__1766473720993403083__call__4205257925753848418__callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (/home/martha/Projects/treehouse/treebook/app/views/layouts/application.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ink_to "Treebook" statuses_path );@output_buffer.safe_concat...
+...                               ^):
+    10:   <div class="navbar">
+    11:     <div class="navbar-inner">
+    12:       <div class="container">
+    13:         <li class"brand"><%= link_to "Treebook" statuses_path %></li>
+    14:       <div>
+    15:     </div>
+    16:   </div>
+  app/controllers/statuses_controller.rb:7:in `index'
+
+
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.8ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (49.2ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:49:05 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (2.0ms)
+Compiled bootstrap.css  (2ms)  (pid 4010)
+Compiled css/bootstrap-responsive.css  (1ms)  (pid 4010)
+Compiled css/bootstrap-responsive.min.css  (1ms)  (pid 4010)
+Compiled css/bootstrap.min.css  (3ms)  (pid 4010)
+Compiled scaffolds.css  (249ms)  (pid 4010)
+Compiled statuses.css  (21ms)  (pid 4010)
+Compiled application.css  (722ms)  (pid 4010)
+Compiled jquery.js  (103ms)  (pid 4010)
+Compiled jquery_ujs.js  (2ms)  (pid 4010)
+Compiled bootstrap.js  (3ms)  (pid 4010)
+Compiled js/bootstrap.min.js  (2ms)  (pid 4010)
+Compiled statuses.js  (915ms)  (pid 4010)
+Compiled application.js  (1391ms)  (pid 4010)
+Completed 200 OK in 2656ms (Views: 2650.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:08 +0300
+Served asset /css/bootstrap-responsive.css - 200 OK (14ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:08 +0300
+Served asset /application.css - 304 Not Modified (100ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:08 +0300
+Served asset /css/bootstrap-responsive.min.css - 200 OK (25ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:08 +0300
+Served asset /css/bootstrap.min.css - 200 OK (47ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:08 +0300
+Served asset /bootstrap.css - 200 OK (20ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:08 +0300
+Served asset /scaffolds.css - 200 OK (26ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:08 +0300
+Served asset /statuses.css - 200 OK (49ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:09 +0300
+Served asset /jquery.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:09 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:09 +0300
+Served asset /bootstrap.js - 200 OK (19ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:09 +0300
+Served asset /js/bootstrap.min.js - 200 OK (17ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:09 +0300
+Served asset /statuses.js - 200 OK (17ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:09 +0300
+Served asset /application.js - 304 Not Modified (253ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:49:39 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.7ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 83ms (Views: 74.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:39 +0300
+Served asset /application.css - 304 Not Modified (62ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /statuses.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /jquery.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /statuses.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 04:49:40 +0300
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:50:17 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 66ms (Views: 61.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:17 +0300
+Served asset /application.css - 304 Not Modified (71ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:17 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:17 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:17 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:17 +0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:18 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:18 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:18 +0300
+Served asset /jquery.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:18 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:18 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:18 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:18 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:18 +0300
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:50:56 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.7ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 149ms (Views: 142.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:56 +0300
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /statuses.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /jquery.js - 304 Not Modified (47ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 04:50:57 +0300
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:51:23 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 158ms (Views: 153.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 04:51:23 +0300
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /statuses.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 04:51:24 +0300
+Served asset /application.js - 304 Not Modified (30ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:53:03 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.5ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /application.css - 304 Not Modified (66ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /scaffolds.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:04 +0300
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:53:52 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 66ms (Views: 61.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /application.css - 304 Not Modified (69ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /jquery.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 04:53:53 +0300
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:55:16 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.6ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 60ms (Views: 53.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /statuses.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /jquery.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 04:55:17 +0300
+Served asset /statuses.js - 304 Not Modified (3ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:56:08 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.7ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 114ms
+
+ActionView::Template::Error (Invalid CSS after "  padding 40px 0": expected "{", was ";"
+  (in /home/martha/Projects/treehouse/treebook/app/assets/stylesheets/statuses.css.scss)):
+    2: <html>
+    3: <head>
+    4:   <title>Treebook</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/statuses.css.scss:6
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2814090095184563739_69929919385500'
+  app/controllers/statuses_controller.rb:7:in `index'
+
+
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.2ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (47.1ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 04:56:21 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.9ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (2.9ms)
+Compiled statuses.css  (20ms)  (pid 4010)
+Compiled application.css  (26ms)  (pid 4010)
+Completed 200 OK in 375ms (Views: 369.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /application.css - 304 Not Modified (49ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /statuses.css - 200 OK (36ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /jquery.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 04:56:22 +0300
+Served asset /application.js - 304 Not Modified (22ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:07:41 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+ERROR: compiling _app_views_statuses_index_html_erb__3552666142935847333_69930093893880 RAISED /home/martha/Projects/treehouse/treebook/app/views/statuses/index.html.erb:10: syntax error, unexpected ':', expecting '}'
+...ethod: :delete, data { confirm: 'Are you sure you want to de...
+...                               ^
+/home/martha/Projects/treehouse/treebook/app/views/statuses/index.html.erb:10: syntax error, unexpected ')', expecting tASSOC
+...ant to delete this status?' } );@output_buffer.safe_concat('
+...                               ^
+/home/martha/Projects/treehouse/treebook/app/views/statuses/index.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/home/martha/Projects/treehouse/treebook/app/views/statuses/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+/home/martha/Projects/treehouse/treebook/app/views/statuses/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_statuses_index_html_erb__3552666142935847333_69930093893880(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "statuses/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>All the Statuses</h1>
+
+'); @statuses.each do |status| 
+@output_buffer.safe_concat('  <div class=status>
+    <strong>');@output_buffer.append= ( status.name );@output_buffer.safe_concat('</strong>
+    <p>');@output_buffer.append= ( status.content );@output_buffer.safe_concat('</p>
+    <span class="admin">
+      ');@output_buffer.append= ( link_to time_ago_in_words(status.created_at) + " ago", status );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      ');@output_buffer.append= ( link_to "Edit", edit_status_path(status) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      ');@output_buffer.append= ( link_to "Delete", status, method: :delete, data { confirm: 'Are you sure you want to delete this status?' } );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </span>
+  </div>
+  <span>
+    ');@output_buffer.append= ( link_to ' Create New Status', new_status_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </span>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `module_eval'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:297:in `compile'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:232:in `compile!'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:144:in `block in render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:125:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/template.rb:143:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:88:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/home/martha/Projects/treehouse/treebook/app/controllers/statuses_controller.rb:7:in `index'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:167:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:414:in `_run__3974334330335913390__process_action__2286019489612622695__callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/notifications.rb:123:in `instrument'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/base.rb:121:in `process'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/abstract_controller/rendering.rb:45:in `process'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal.rb:203:in `dispatch'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_controller/metal.rb:246:in `block in action'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/query_cache.rb:64:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `_run__1766473720993403083__call__4205257925753848418__callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/logger.rb:32:in `call_app'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `block in call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/logger.rb:16:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/static.rb:62:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/engine.rb:479:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/application.rb:223:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.9/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/martha/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/martha/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered statuses/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (/home/martha/Projects/treehouse/treebook/app/views/statuses/index.html.erb:10: syntax error, unexpected ':', expecting '}'
+...ethod: :delete, data { confirm: 'Are you sure you want to de...
+...                               ^
+/home/martha/Projects/treehouse/treebook/app/views/statuses/index.html.erb:10: syntax error, unexpected ')', expecting tASSOC
+...ant to delete this status?' } );@output_buffer.safe_concat('
+...                               ^
+/home/martha/Projects/treehouse/treebook/app/views/statuses/index.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/home/martha/Projects/treehouse/treebook/app/views/statuses/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+/home/martha/Projects/treehouse/treebook/app/views/statuses/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'):
+    7:     <span class="admin">
+    8:       <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
+    9:       <%= link_to "Edit", edit_status_path(status) %>
+    10:       <%= link_to "Delete", status, method: :delete, data { confirm: 'Are you sure you want to delete this status?' } %>
+    11:     </span>
+    12:   </div>
+    13:   <span>
+  app/controllers/statuses_controller.rb:7:in `index'
+
+
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (11.0ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.3ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.5ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.7ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 110ms (Views: 102.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Served asset /application.css - 304 Not Modified (94ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Served asset /jquery.js - 304 Not Modified (51ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:07:58 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:07:59 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:07:59 +0300
+Served asset /statuses.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:07:59 +0300
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:08:43 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 64ms (Views: 58.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /scaffolds.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /statuses.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /jquery.js - 304 Not Modified (61ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:44 +0300
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2012-12-23 05:08:47 +0300
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (129.3ms)
+  Rendered statuses/new.html.erb within layouts/application (162.6ms)
+Completed 200 OK in 261ms (Views: 222.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /application.css - 304 Not Modified (48ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /statuses.css - 304 Not Modified (49ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:08:48 +0300
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2012-12-23 05:09:21 +0300
+Processing by StatusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YS5B8Q7HxqHop3tZ2IcVpYf1OTR3jy2vhDjxtB0M71k=", "status"=>{"name"=>"Njeri Chelimo", "content"=>"I am working on Treebook!"}, "commit"=>"Create Status"}
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36mSQL (246.8ms)[0m  [1mINSERT INTO "statuses" ("content", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "I am working on Treebook!"], ["created_at", Sun, 23 Dec 2012 02:09:21 UTC +00:00], ["name", "Njeri Chelimo"], ["updated_at", Sun, 23 Dec 2012 02:09:21 UTC +00:00]]
+  [1m[35m (206.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/statuses/1
+Completed 302 Found in 502ms (ActiveRecord: 454.5ms)
+
+
+Started GET "/statuses/1" for 127.0.0.1 at 2012-12-23 05:09:22 +0300
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStatus Load (1.7ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered statuses/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 107ms (Views: 81.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:22 +0300
+Served asset /application.css - 304 Not Modified (53ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:22 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:22 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:23 +0300
+Served asset /scaffolds.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:23 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:23 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:23 +0300
+Served asset /statuses.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:23 +0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:23 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:23 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:23 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:23 +0300
+Served asset /statuses.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:23 +0300
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:09:35 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.6ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 70ms (Views: 62.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:35 +0300
+Served asset /application.css - 304 Not Modified (35ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:09:36 +0300
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:10:12 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (10.2ms)
+Compiled statuses.css  (45ms)  (pid 4010)
+Compiled application.css  (18ms)  (pid 4010)
+Completed 200 OK in 360ms (Views: 356.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:13 +0300
+Served asset /application.css - 304 Not Modified (70ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:13 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /statuses.css - 200 OK (26ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:14 +0300
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:10:44 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.6ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (8.8ms)
+Compiled statuses.css  (20ms)  (pid 4010)
+Compiled application.css  (24ms)  (pid 4010)
+Completed 200 OK in 334ms (Views: 328.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /application.css - 304 Not Modified (142ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /statuses.css - 200 OK (55ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /jquery.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /statuses.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:10:45 +0300
+Served asset /application.js - 304 Not Modified (30ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:11:00 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.8ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (10.4ms)
+Compiled statuses.css  (19ms)  (pid 4010)
+Compiled application.css  (16ms)  (pid 4010)
+Completed 200 OK in 334ms (Views: 329.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:01 +0300
+Served asset /application.css - 304 Not Modified (103ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:01 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:01 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:01 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:01 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:01 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:01 +0300
+Served asset /statuses.css - 200 OK (43ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:02 +0300
+Served asset /jquery.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:02 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:02 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:02 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:02 +0300
+Served asset /statuses.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:02 +0300
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:11:22 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.8ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (12.2ms)
+Compiled statuses.css  (23ms)  (pid 4010)
+Compiled application.css  (25ms)  (pid 4010)
+Completed 200 OK in 401ms (Views: 395.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /application.css - 304 Not Modified (139ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /statuses.css - 200 OK (44ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:23 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:24 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:11:24 +0300
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:12:08 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (12.2ms)
+Compiled statuses.css  (20ms)  (pid 4010)
+Compiled application.css  (16ms)  (pid 4010)
+Completed 200 OK in 313ms (Views: 309.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:09 +0300
+Served asset /application.css - 304 Not Modified (150ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:09 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:09 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:09 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:09 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:09 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:09 +0300
+Served asset /statuses.css - 200 OK (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:09 +0300
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:10 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:10 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:10 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:10 +0300
+Served asset /application.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:10 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:12:45 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.5ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 69ms (Views: 63.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /statuses.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /statuses.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:46 +0300
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (11.9ms)
+  Rendered statuses/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /application.css - 304 Not Modified (47ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /statuses.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:12:52 +0300
+Served asset /application.js - 304 Not Modified (23ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2012-12-23 05:13:16 +0300
+Processing by StatusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YS5B8Q7HxqHop3tZ2IcVpYf1OTR3jy2vhDjxtB0M71k=", "status"=>{"name"=>"Martha Chumo", "content"=>"This is my first post on Treebook."}, "commit"=>"Create Status"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "statuses" ("content", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["content", "This is my first post on Treebook."], ["created_at", Sun, 23 Dec 2012 02:13:16 UTC +00:00], ["name", "Martha Chumo"], ["updated_at", Sun, 23 Dec 2012 02:13:16 UTC +00:00]]
+  [1m[36m (211.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/statuses/2
+Completed 302 Found in 230ms (ActiveRecord: 213.1ms)
+
+
+Started GET "/statuses/2" for 127.0.0.1 at 2012-12-23 05:13:16 +0300
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mStatus Load (0.4ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered statuses/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 71ms (Views: 65.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:17 +0300
+Served asset /application.css - 304 Not Modified (124ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:17 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:17 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:17 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:17 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:17 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:17 +0300
+Served asset /statuses.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:17 +0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:18 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:18 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:18 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:18 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:18 +0300
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (1.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 82ms (Views: 71.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /statuses.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:22 +0300
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:13:54 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (1.1ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (27.6ms)
+Compiled statuses.css  (24ms)  (pid 4010)
+Compiled application.css  (20ms)  (pid 4010)
+Completed 200 OK in 367ms (Views: 358.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:55 +0300
+Served asset /application.css - 304 Not Modified (169ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:55 +0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:55 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:55 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:56 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:56 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:13:56 +0300
+Served asset /statuses.css - 200 OK (36ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:56 +0300
+Served asset /jquery.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:56 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:56 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:56 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:56 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:13:56 +0300
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:14:08 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (1.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (24.0ms)
+Compiled statuses.css  (24ms)  (pid 4010)
+Compiled application.css  (16ms)  (pid 4010)
+Completed 200 OK in 244ms (Views: 233.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:08 +0300
+Served asset /application.css - 304 Not Modified (59ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:08 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /statuses.css - 200 OK (35ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:09 +0300
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:14:22 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.5ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (14.3ms)
+Compiled statuses.css  (23ms)  (pid 4010)
+Compiled application.css  (16ms)  (pid 4010)
+Completed 200 OK in 260ms (Views: 256.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /application.css - 304 Not Modified (234ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /statuses.css - 200 OK (25ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /jquery.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:23 +0300
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:14:47 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (17.3ms)
+Compiled statuses.css  (21ms)  (pid 4010)
+Compiled application.css  (25ms)  (pid 4010)
+Completed 200 OK in 255ms (Views: 250.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:48 +0300
+Served asset /application.css - 304 Not Modified (113ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:48 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:48 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:48 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:48 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:49 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:14:49 +0300
+Served asset /statuses.css - 200 OK (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:49 +0300
+Served asset /jquery.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:49 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:49 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:49 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:49 +0300
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:14:49 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:15:41 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.5ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (13.8ms)
+Compiled statuses.css  (19ms)  (pid 4010)
+Compiled application.css  (16ms)  (pid 4010)
+Completed 200 OK in 225ms (Views: 220.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:42 +0300
+Served asset /application.css - 304 Not Modified (132ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:42 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:42 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:42 +0300
+Served asset /scaffolds.css - 304 Not Modified (41ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:42 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:42 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:42 +0300
+Served asset /statuses.css - 200 OK (23ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:42 +0300
+Served asset /jquery.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:42 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:43 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:43 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:43 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:43 +0300
+Served asset /application.js - 304 Not Modified (181ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:15:52 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (1.7ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (20.9ms)
+Compiled statuses.css  (28ms)  (pid 4010)
+Compiled application.css  (30ms)  (pid 4010)
+Completed 200 OK in 332ms (Views: 318.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /application.css - 304 Not Modified (100ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /scaffolds.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /statuses.css - 200 OK (24ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:15:53 +0300
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:16:53 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.8ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 186ms (Views: 179.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:16:53 +0300
+Served asset /application.css - 304 Not Modified (111ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:16:53 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:16:53 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:16:53 +0300
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:16:53 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:16:54 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:16:54 +0300
+Served asset /statuses.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:16:54 +0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:16:54 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:16:54 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:16:54 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:16:54 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:16:54 +0300
+Served asset /application.js - 304 Not Modified (29ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:17:29 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.7ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (15.6ms)
+Compiled statuses.css  (32ms)  (pid 4010)
+Compiled application.css  (18ms)  (pid 4010)
+Completed 200 OK in 259ms (Views: 251.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:30 +0300
+Served asset /application.css - 304 Not Modified (247ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:30 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:30 +0300
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:30 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:30 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:30 +0300
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:30 +0300
+Served asset /statuses.css - 200 OK (27ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:31 +0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:31 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:31 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:31 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:31 +0300
+Served asset /statuses.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:31 +0300
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:17:45 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.6ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 62ms (Views: 57.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:45 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:45 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:45 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:45 +0300
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:46 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:46 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:17:46 +0300
+Served asset /statuses.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:46 +0300
+Served asset /jquery.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:46 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:46 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:46 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:46 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:17:46 +0300
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/statuses/2" for 127.0.0.1 at 2012-12-23 05:18:06 +0300
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStatus Load (0.4ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered statuses/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 57ms (Views: 51.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:06 +0300
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:06 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /jquery.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:07 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:18:42 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.7ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 69ms (Views: 63.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /statuses.css - 304 Not Modified (44ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:18:43 +0300
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:20:30 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.6ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 77ms (Views: 71.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /statuses.css - 304 Not Modified (40ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /jquery.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:31 +0300
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:20:56 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.6ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (22.4ms)
+Compiled statuses.css  (29ms)  (pid 4010)
+Compiled application.css  (16ms)  (pid 4010)
+Completed 200 OK in 232ms (Views: 226.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:57 +0300
+Served asset /application.css - 304 Not Modified (169ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:57 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:57 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:57 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:57 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:57 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:57 +0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:20:57 +0300
+Served asset /statuses.css - 200 OK (19ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:57 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:58 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:58 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:58 +0300
+Served asset /statuses.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:20:58 +0300
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:21:23 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.7ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 78ms (Views: 73.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:23 +0300
+Served asset /application.css - 304 Not Modified (63ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /statuses.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /statuses.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:24 +0300
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:21:53 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.6ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (19.2ms)
+Compiled statuses.css  (30ms)  (pid 4010)
+Compiled application.css  (16ms)  (pid 4010)
+Completed 200 OK in 243ms (Views: 237.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /application.css - 304 Not Modified (250ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /scaffolds.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /statuses.css - 200 OK (27ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:21:54 +0300
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/statuses/1" for 127.0.0.1 at 2012-12-23 05:22:01 +0300
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered statuses/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 54ms (Views: 48.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:01 +0300
+Served asset /application.css - 304 Not Modified (47ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:01 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:01 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:02 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:02 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:02 +0300
+Served asset /scaffolds.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:02 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:02 +0300
+Served asset /jquery.js - 304 Not Modified (52ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:02 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:02 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:02 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:02 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:02 +0300
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:22:32 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.6ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:33 +0300
+Served asset /application.css - 304 Not Modified (82ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:33 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:33 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:33 +0300
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:33 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:33 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:22:33 +0300
+Served asset /statuses.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:33 +0300
+Served asset /jquery.js - 304 Not Modified (42ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:34 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:34 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:34 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:34 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:22:34 +0300
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:23:27 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.6ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (15.8ms)
+Compiled statuses.css  (180ms)  (pid 4010)
+Compiled application.css  (17ms)  (pid 4010)
+Completed 200 OK in 372ms (Views: 366.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /application.css - 304 Not Modified (125ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /scaffolds.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /statuses.css - 200 OK (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /jquery.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:28 +0300
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:23:54 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.7ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (18.3ms)
+Compiled statuses.css  (36ms)  (pid 4010)
+Compiled application.css  (19ms)  (pid 4010)
+Completed 200 OK in 385ms (Views: 379.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:54 +0300
+Served asset /application.css - 304 Not Modified (108ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /statuses.css - 200 OK (30ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:23:55 +0300
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:30:42 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (13.9ms)
+Compiled statuses.css  (39ms)  (pid 4010)
+Compiled application.css  (16ms)  (pid 4010)
+Completed 500 Internal Server Error in 1247ms
+
+ActionView::Template::Error (Error: Parse error on line 6: Unexpected '.'
+  (in /home/martha/Projects/treehouse/treebook/app/assets/javascripts/statuses.js.coffee)):
+    3: <head>
+    4:   <title>Treebook</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2814090095184563739_69929919385500'
+  app/controllers/statuses_controller.rb:7:in `index'
+
+
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (9.9ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.9ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.9ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:30:58 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.8ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 723ms
+
+ActionView::Template::Error (Error: Parse error on line 6: Unexpected '.'
+  (in /home/martha/Projects/treehouse/treebook/app/assets/javascripts/statuses.js.coffee)):
+    3: <head>
+    4:   <title>Treebook</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2814090095184563739_69929919385500'
+  app/controllers/statuses_controller.rb:7:in `index'
+
+
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+  Rendered /home/martha/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.8ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:31:26 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.6ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (16.6ms)
+Compiled statuses.js  (550ms)  (pid 4010)
+Compiled application.js  (24ms)  (pid 4010)
+Completed 200 OK in 803ms (Views: 797.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:31:27 +0300
+Served asset /application.css - 304 Not Modified (254ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /scaffolds.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /statuses.css - 200 OK (33ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /application.js - 304 Not Modified (98ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:31:28 +0300
+Served asset /statuses.js - 200 OK (23ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:32:50 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.6ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (20.0ms)
+Compiled statuses.js  (518ms)  (pid 4010)
+Compiled application.js  (24ms)  (pid 4010)
+Completed 200 OK in 861ms (Views: 854.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:32:51 +0300
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /statuses.js - 200 OK (21ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:32:52 +0300
+Served asset /application.js - 304 Not Modified (92ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:34:58 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (14.5ms)
+Compiled statuses.css  (39ms)  (pid 4010)
+Compiled application.css  (16ms)  (pid 4010)
+Compiled statuses.js  (498ms)  (pid 4010)
+Compiled application.js  (29ms)  (pid 4010)
+Completed 200 OK in 994ms (Views: 990.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /application.css - 304 Not Modified (183ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /scaffolds.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /statuses.css - 200 OK (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /jquery.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /statuses.js - 200 OK (23ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:35:00 +0300
+Served asset /application.js - 304 Not Modified (219ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:36:22 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (1.3ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (35.9ms)
+Compiled statuses.css  (44ms)  (pid 4010)
+Compiled application.css  (23ms)  (pid 4010)
+Completed 200 OK in 309ms (Views: 299.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:36:23 +0300
+Served asset /application.css - 304 Not Modified (137ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:36:23 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:36:23 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:36:23 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:36:23 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:36:23 +0300
+Served asset /scaffolds.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:36:23 +0300
+Served asset /statuses.css - 200 OK (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:36:23 +0300
+Served asset /jquery.js - 304 Not Modified (48ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:36:24 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:36:24 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:36:24 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:36:24 +0300
+Served asset /statuses.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:36:24 +0300
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:37:14 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.7ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 78ms (Views: 71.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:37:14 +0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:37:14 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /scaffolds.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /statuses.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:37:15 +0300
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2012-12-23 05:37:59 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.6ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 82ms (Views: 76.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /jquery.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /statuses.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:00 +0300
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2012-12-23 05:38:06 +0300
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (12.2ms)
+  Rendered statuses/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /statuses.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 05:38:07 +0300
+Served asset /application.js - 304 Not Modified (16ms)

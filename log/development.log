@@ -9646,3 +9646,1418 @@ Connecting to database specified by database.yml
   [1m[35m (199.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121221143411')
   [1m[36m (222.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121228024247')[0m
 Binary data inserted for `string` type on column `encrypted_password`
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-29 11:26:03 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.6ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered statuses/index.html.erb within layouts/application (567.3ms)
+Completed 200 OK in 2290ms (Views: 1521.0ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /bootstrap.css - 200 OK (28ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /application.css - 200 OK (109ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /scaffolds.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /statuses.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /jquery.js - 304 Not Modified (106ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /bootstrap.js - 200 OK (21ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /statuses.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:07 +0300
+Served asset /application.js - 200 OK (237ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-29 11:26:38 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (14.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1030.5ms)
+Completed 200 OK in 1142ms (Views: 1136.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:40 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:40 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:40 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:40 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:40 +0300
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:40 +0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:40 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:40 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:40 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-12-29 11:26:50 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VNVqqPJ/SDZ1Uodv3QE1OFmQLZk1msqaxmqMYdRwANk=", "user"=>{"email"=>"martha.c.chumo@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'martha.c.chumo@gmail.com' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (65.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2012-12-29 08:26:51.463639', "sign_in_count" = 2, "updated_at" = '2012-12-29 08:26:51.499785' WHERE "users"."id" = 1
+  [1m[36m (217.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1373ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-29 11:26:52 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.7ms)[0m  SELECT "statuses".* FROM "statuses" 
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered statuses/index.html.erb within layouts/application (29.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 116ms (Views: 108.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:52 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:52 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:52 +0300
+Served asset /jquery.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:52 +0300
+Served asset /scaffolds.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:52 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:26:52 +0300
+Served asset /statuses.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:52 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:52 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:26:52 +0300
+Served asset /statuses.js - 304 Not Modified (5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2012-12-29 11:33:57 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VNVqqPJ/SDZ1Uodv3QE1OFmQLZk1msqaxmqMYdRwANk="}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 55ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-29 11:33:57 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (1.6ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered statuses/index.html.erb within layouts/application (64.2ms)
+Completed 200 OK in 227ms (Views: 215.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:33:58 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:33:58 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:33:58 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:33:58 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:33:58 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:33:58 +0300
+Served asset /jquery.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:33:58 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:33:58 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:33:58 +0300
+Served asset /statuses.js - 304 Not Modified (6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-29 11:34:22 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 117ms (Views: 113.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:34:22 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:34:22 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:34:22 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:34:22 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:34:22 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:34:22 +0300
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:34:22 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:34:22 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:34:22 +0300
+Served asset /statuses.js - 304 Not Modified (10ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-12-29 11:34:32 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"415oC7AwVbEjoY+D6BTLFw8kReiDeJmdxTdD9Tve0Qk=", "user"=>{"email"=>"martha.c.chumo@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'martha.c.chumo@gmail.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "remember_created_at" = '2012-12-29 08:34:32.833668', "updated_at" = '2012-12-29 08:34:32.838667' WHERE "users"."id" = 1
+  [1m[36m (213.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2012-12-29 08:26:51.463639', "current_sign_in_at" = '2012-12-29 08:34:33.062847', "sign_in_count" = 3, "updated_at" = '2012-12-29 08:34:33.067493' WHERE "users"."id" = 1[0m
+  [1m[35m (187.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 1056ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-29 11:34:33 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (1.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered statuses/index.html.erb within layouts/application (37.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 119ms (Views: 109.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:34:33 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:34:33 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:34:34 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:34:34 +0300
+Served asset /scaffolds.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:34:34 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:34:34 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:34:34 +0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:34:34 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:34:34 +0300
+Served asset /statuses.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-29 11:35:06 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (1.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered statuses/index.html.erb within layouts/application (25.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 104ms (Views: 94.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /application.css - 304 Not Modified (40ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /statuses.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /jquery.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:07 +0300
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2012-12-29 11:35:12 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"415oC7AwVbEjoY+D6BTLFw8kReiDeJmdxTdD9Tve0Qk="}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mUPDATE "users" SET "remember_created_at" = NULL, "updated_at" = '2012-12-29 08:35:12.213531' WHERE "users"."id" = 1[0m
+  [1m[35m (199.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 230ms (ActiveRecord: 201.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-29 11:35:12 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.6ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered statuses/index.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 127ms (Views: 119.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:12 +0300
+Served asset /application.css - 304 Not Modified (40ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:35:13 +0300
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-29 11:36:37 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (4.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 143ms (Views: 139.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /application.css - 304 Not Modified (98ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /statuses.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /statuses.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:38 +0300
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-12-29 11:36:40 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hz9dW+QxtTBRazGzEtIoGF920PiBBd9as6hI8lhwfKs=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hz9dW+QxtTBRazGzEtIoGF920PiBBd9as6hI8lhwfKs=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 107ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:36:41 +0300
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2012-12-29 11:41:32 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (8.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (50.3ms)
+Completed 200 OK in 300ms (Views: 295.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /statuses.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /jquery.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /statuses.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:41:33 +0300
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-12-29 11:42:44 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hz9dW+QxtTBRazGzEtIoGF920PiBBd9as6hI8lhwfKs=", "user"=>{"first_name"=>"Eva", "last_name"=>"Chebet", "profile_name"=>"chumoeva", "email"=>"chumoevah@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'chumoevah@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."profile_name" = 'chumoeva' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.erb (4.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 969ms (Views: 200.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:42:45 +0300
+Served asset /application.css - 304 Not Modified (47ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /statuses.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:42:46 +0300
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-12-29 11:43:14 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hz9dW+QxtTBRazGzEtIoGF920PiBBd9as6hI8lhwfKs=", "user"=>{"first_name"=>"Eva", "last_name"=>"Chebet", "profile_name"=>"EvaChebet", "email"=>"chumoevah@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'chumoevah@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."profile_name" = 'EvaChebet' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.erb (2.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 731ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /statuses.css - 304 Not Modified (38ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:43:16 +0300
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-12-29 11:45:45 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hz9dW+QxtTBRazGzEtIoGF920PiBBd9as6hI8lhwfKs=", "user"=>{"first_name"=>"Eva", "last_name"=>"Chebet", "profile_name"=>"EvaChebet", "email"=>"chumoevah@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'chumoevah@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."profile_name" = 'EvaChebet' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.erb (2.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 1199ms (Views: 112.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:45:47 +0300
+Served asset /application.css - 304 Not Modified (54ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:45:47 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:45:47 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:45:47 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:45:47 +0300
+Served asset /scaffolds.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:45:47 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:45:47 +0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:45:48 +0300
+Served asset /statuses.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:45:48 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:45:48 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:45:48 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:45:48 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:45:48 +0300
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-12-29 11:46:14 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hz9dW+QxtTBRazGzEtIoGF920PiBBd9as6hI8lhwfKs=", "user"=>{"first_name"=>"Eva", "last_name"=>"Chebet", "profile_name"=>"chebet", "email"=>"chumoevah@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'chumoevah@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."profile_name" = 'chebet' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.erb (3.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 703ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:15 +0300
+Served asset /application.css - 304 Not Modified (51ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:15 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:15 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:15 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:16 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:16 +0300
+Served asset /scaffolds.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:16 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:16 +0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:16 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:16 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:16 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:16 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:16 +0300
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2012-12-29 11:46:34 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (4.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (148.5ms)
+Completed 200 OK in 235ms (Views: 229.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /application.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:46:35 +0300
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-12-29 11:47:32 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hz9dW+QxtTBRazGzEtIoGF920PiBBd9as6hI8lhwfKs=", "user"=>{"first_name"=>"Kasyoka", "last_name"=>"Salim", "profile_name"=>"salimkas", "email"=>"kas@jamlab.co.ke", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'kas@jamlab.co.ke' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."profile_name" = 'salimkas' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 696ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /application.css - 304 Not Modified (92ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /scaffolds.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /jquery.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:47:34 +0300
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2012-12-29 11:55:11 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (6.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 403ms (Views: 145.0ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 93ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:12 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:13 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:13 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:13 +0300
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-12-29 11:55:50 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hz9dW+QxtTBRazGzEtIoGF920PiBBd9as6hI8lhwfKs=", "user"=>{"first_name"=>"Joseph", "last_name"=>"Wachira", "profile_name"=>"chiwa", "email"=>"chiwaj@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'chiwaj@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."profile_name" = 'chiwa' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "first_name", "last_name", "last_sign_in_at", "last_sign_in_ip", "profile_name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 29 Dec 2012 08:55:51 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "chiwaj@gmail.com"], ["encrypted_password", "$2a$10$IKkkIR8Fi6oZyWwcSwHliOG0AUDZLR6DQN1GpjDe5E/31NOeBGGgO"], ["first_name", "Joseph"], ["last_name", "Wachira"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["profile_name", "chiwa"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sat, 29 Dec 2012 08:55:51 UTC +00:00]]
+  [1m[35m (199.2ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2012-12-29 08:55:51.367358', "current_sign_in_at" = '2012-12-29 08:55:51.367358', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2012-12-29 08:55:51.375817' WHERE "users"."id" = 4
+  [1m[36m (196.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1036ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-29 11:55:51 +0300
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.6ms)[0m  SELECT "statuses".* FROM "statuses" 
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered statuses/index.html.erb within layouts/application (37.4ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+Completed 200 OK in 287ms (Views: 108.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /jquery.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /statuses.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 11:55:52 +0300
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2012-12-29 12:07:03 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Hz9dW+QxtTBRazGzEtIoGF920PiBBd9as6hI8lhwfKs="}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 351ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-29 12:07:04 +0300
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.5ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered statuses/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 163ms (Views: 112.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:04 +0300
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:04 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /jquery.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:05 +0300
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-29 12:07:09 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 159ms (Views: 152.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /scaffolds.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /statuses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /jquery.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:10 +0300
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-12-29 12:07:12 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v1PSgzCakzCLyA5EMFEoyrhdfPdq/UwTOnKI7sFdHvs=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 5ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v1PSgzCakzCLyA5EMFEoyrhdfPdq/UwTOnKI7sFdHvs=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (5.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 128ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /statuses.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 12:07:13 +0300
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-12-29 12:09:27 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v1PSgzCakzCLyA5EMFEoyrhdfPdq/UwTOnKI7sFdHvs=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v1PSgzCakzCLyA5EMFEoyrhdfPdq/UwTOnKI7sFdHvs=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (40.0ms)
+Compiled application.css  (20ms)  (pid 3703)
+Completed 200 OK in 470ms (Views: 467.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /application.css - 200 OK (145ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /css/bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /css/bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /statuses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /jquery.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /statuses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-29 12:09:28 +0300
+Served asset /application.js - 304 Not Modified (17ms)

@@ -5,3 +5,9 @@ martha:
   last_name: "Chumo"
   email: "marthachumo@yahoo.com"
   profile_name: "MarthaChumo"
+
+joseph:
+  first_name: "Joseph"
+  last_name: "Wachira"
+  email: "chiwaj@gmail.com"
+  profile_name: "Chiwa"

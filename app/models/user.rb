@@ -4,6 +4,15 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :profile_name
 
   has_many :statuses
+  has_many :user_friendships
+  has_many :friends, through: :user_friendships,
+                     conditions: { user_friendships: { state: 'accepted' } }
+
+  has_many :pending_user_friendships, class_name: 'UserFriendship',
+                                      foreign_key: :user_id,
+                                      conditions: { state: 'pending' }
+
+  has_many :pending_friends, through: :pending_user_friendships, source: :friend
 
   validates :last_name, presence: true
   validates :first_name, presence: true
@@ -16,6 +25,10 @@ class User < ActiveRecord::Base
 
   def full_name
     first_name + " " + last_name
+  end
+
+  def to_param
+    profile_name
   end
 
   def gravatar_url

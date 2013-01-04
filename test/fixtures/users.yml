@@ -5,9 +5,16 @@ martha:
   last_name: "Chumo"
   email: "marthachumo@yahoo.com"
   profile_name: "MarthaChumo"
+  encrypted_password: <%= User.new.send(:password_digest, 'testing') %>
 
 joseph:
   first_name: "Joseph"
   last_name: "Wachira"
   email: "chiwaj@gmail.com"
   profile_name: "Chiwa"
+
+mary:
+  first_name: "Mary"
+  last_name: "Wambui"
+  email: "marywambui@gmail.com"
+  profile_name: "MaryWambui"
